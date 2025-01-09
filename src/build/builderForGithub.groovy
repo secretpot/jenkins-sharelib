@@ -12,5 +12,6 @@ def buildGolangProject(params) {
         )
         echo "GIT_COMMIT: ${changeLogSets['GIT_COMMIT']}"
         sh "go build ."
+        sh "echo built success"
     }
 }
