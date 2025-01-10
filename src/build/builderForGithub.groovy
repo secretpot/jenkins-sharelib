@@ -7,7 +7,7 @@ def buildGolangProject(params) {
             doGenerateSubmoduleConfigurations: false,
             extensions: [[$class: 'CleanCheckout']],
             submoduleCfg: [],
-            userRemoteConfigs: [[url: "ssh://${GIT_USERNAME}@github.com/${params['OWNER']}/${params['REPO']}.git"]]
+            userRemoteConfigs: [[url: "https://github.com/${params['OWNER']}/${params['REPO']}.git"]]
         )
         echo "GIT_COMMIT: ${changeLogSets['GIT_COMMIT']}"
         sh "go build ."
